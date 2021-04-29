@@ -12,6 +12,11 @@ class App extends Component {
                   component={routes.register.component}
                   exact={true}
                />
+               <Route
+                  path={routes.login.path}
+                  component={routes.login.component}
+                  exact={true}
+               />   
             </Switch>
          </Router>
       )
