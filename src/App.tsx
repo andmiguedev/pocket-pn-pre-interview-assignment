@@ -22,6 +22,11 @@ class App extends Component {
                   component={routes.makeAppointment.component}
                   exact={true}
                />
+               <Route
+                  path={routes.recentAppointments.path}
+                  component={routes.recentAppointments.component}
+                  exact={true}
+               />
             </Switch>
          </Router>
       )
