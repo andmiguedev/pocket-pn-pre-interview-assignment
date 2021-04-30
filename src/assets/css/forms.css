@@ -1,4 +1,178 @@
 /*----------------------
+	Global
+-----------------------*/
+@import url('https://fonts.googleapis.com/css?family=Rubik:400,500,700');
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  color: #777;
+  font-size: 0.875rem;
+  font-family: 'Rubik', sans-serif;
+  background-color: #fafafa;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+}
+
+a:hover,
+a:active,
+a:focus {
+  text-decoration: none;
+  color: #009ce7;
+  outline: none;
+}
+
+a {
+  color: #009ce7;
+}
+input,
+button,
+a {
+  transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+}
+input,
+button {
+  outline: none;
+}
+
+input[type='text'],
+input[type='password'] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+textarea .form-control {
+  resize: vertical;
+  height: auto;
+}
+
+/*----------------------
+	Common
+-----------------------*/
+.mt-20 {
+  margin-top: 20px !important;
+}
+
+.mb-20 {
+  margin-bottom: 20px !important;
+}
+
+/*----------------------
+	Bootstrap
+-----------------------*/
+h1,
+.h1 {
+  font-size: 2.25rem;
+}
+
+h2,
+.h2 {
+  font-size: 1.875rem;
+}
+
+h3,
+.h3 {
+  font-size: 1.5rem;
+}
+
+h4,
+.h4 {
+  font-size: 1.125rem;
+}
+
+h5,
+.h5 {
+  font-size: 0.875rem;
+}
+
+h6,
+.h6 {
+  font-size: 0.75rem;
+}
+
+.btn {
+  font-size: 0.875rem;
+}
+
+.btn.focus,
+.btn:focus {
+  box-shadow: inherit !important;
+}
+
+.btn.rounded {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary {
+  border-color: transparent;
+  background-color: #009efb;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.display-block {
+  display: block;
+}
+
+.form-control {
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0.469rem 0.75rem;
+  border-color: #eaeaea;
+  font-size: 14px;
+  min-height: 40px;
+}
+
+.form-control:focus {
+  border-color: #009efb;
+  box-shadow: none;
+  outline: 0 none;
+}
+
+.list-group-item {
+  border: 1px solid #eaeaea;
+}
+
+/*----------------------
+	Layouts
+-----------------------*/
+.layout-wrapper {
+  left: 0;
+  position: relative;
+  padding-top: 50px;
+  margin-left: 230px;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.layout-wrapper > .container {
+  padding: 30px;
+}
+
+.container {
+  padding: 0 50px;
+}
+
+/*----------------------
 	Images
 -----------------------*/
 .company-logo {
@@ -86,4 +260,68 @@
   color: #323232;
   font-size: 14px;
   font-weight: normal;
+}
+
+/*----------------------
+	Tables
+-----------------------*/
+.table {
+  color: #000;
+  border: 1px solid #f0f0f0;
+}
+
+.table-stripped > tbody > tr:nth-last-of-type(2n + 1) {
+  background-color: #f6f6f6;
+}
+
+.page-title {
+  color: #565656;
+  margin-bottom: 20px;
+  font-size: 21px;
+  font-weight: normal;
+}
+
+/*----------------------
+	Ant Design
+-----------------------*/
+td.ant-table-column-sort {
+  background: inherit !important;
+}
+
+.ant-table-tbody > tr > td {
+  padding: 6px 6px !important;
+}
+
+.ant-table-thead > tr > th {
+  border-bottom: 1px solid #c1c1c1;
+  border-top: 1px solid #c1c1c1;
+  font-weight: 600;
+}
+
+.ant-table-thead > tr > th {
+  padding: 8px 4px;
+}
+.ant-table-column-sorters {
+  padding: 8px 16px;
+}
+
+.ant-table-tbody > tr > td {
+  padding: 6px 16px;
+}
+
+.ant-table-content a {
+  color: #3c3c3c !important;
+}
+
+.customtable .ant-table-thead > tr > th {
+  display: none;
+}
+
+.ant-table-thead > tr > th {
+  background: #fff !important;
+}
+
+.ant-pagination-options {
+  position: relative;
+  z-index: -1;
 }
