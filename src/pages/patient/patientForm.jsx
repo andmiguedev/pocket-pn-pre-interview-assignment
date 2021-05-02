@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import demoLogo from '../../assets/images/logo-dark.png';
 
+import { registerPatient } from '../../store/actions/index';
+import { connect } from 'react-redux';
+
 class PatientForm extends Component {
    state = {
       patientForm: {
@@ -39,9 +42,10 @@ class PatientForm extends Component {
       // console.log(this.state.patientForm);
 
       if (this.state.registerForm) {
-         
+         this.props.dispatch(registerPatient(
+            this.state.patientForm));
       } else {
-
+         
       }
    }
 
@@ -179,4 +183,8 @@ class PatientForm extends Component {
    }
 }
 
-export default PatientForm;
+const mapStateToProps = state => ({
+   auth:state.auth
+})
+
+export default connect(mapStateToProps)(PatientForm);
