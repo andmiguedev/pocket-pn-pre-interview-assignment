@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-
-import { Link } from 'react-router-dom';
 import demoLogo from '../../assets/images/logo-dark.png';
 
 class PatientForm extends Component {
@@ -35,7 +33,16 @@ class PatientForm extends Component {
 
    handleSubmitForm = (event) => {
       event.preventDefault();
+      this.setState({
+         submitForm: true
+      })
       // console.log(this.state.patientForm);
+
+      if (this.state.registerForm) {
+         
+      } else {
+
+      }
    }
 
    render() {
@@ -51,7 +58,7 @@ class PatientForm extends Component {
                      onSubmit={this.handleRegistration}
                   >
                      <div className="company-logo">
-                        <Link to="/dashboard"><img src={demoLogo} alt="Click here to go Dashboard home page" /></Link>
+                        <img src={demoLogo} alt="This is the logo for this assignment demo" />
                      </div>
                      <h5 className="pb-3 text-center">
                         {formTitle}
