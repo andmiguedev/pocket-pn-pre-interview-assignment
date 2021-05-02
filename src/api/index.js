@@ -30,3 +30,19 @@ export const registerPatient = async ({
       return { error: error.message }
    }
 }
+
+export const loginPatient = ({ email, password }) => (
+   firebase
+      .auth().signInWithEmailAndPassword(email, password)
+      .then(response => {
+         return patientsCollection.doc(response.user.uid)
+            .get().then(snapshot => {
+               return {
+                  isAuthenticated: true,
+                  account: snapshot.data()
+               }
+            });
+      }).catch(error => {
+         return { error: error.message}
+      })
+);

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import demoLogo from '../../assets/images/logo-dark.png';
 
-import { registerPatient } from '../../store/actions/index';
+import { registerPatient, loginPatient } from '../../store/actions/index';
 import { connect } from 'react-redux';
 
 class PatientForm extends Component {
@@ -43,10 +43,19 @@ class PatientForm extends Component {
 
       if (this.state.registerForm) {
          this.props.dispatch(registerPatient(
-            this.state.patientForm));
-      } else {
+            this.state.patientForm)
+            );
          
+      } else {
+         this.props.dispatch(loginPatient(
+            this.state.patientForm)).then(
+               ({ payload }) => this.handleRedirectForm(payload)
+            );
       }
+   }
+
+   handleRedirectForm = () => {
+      return this.props.history.push('/recent-appointments');
    }
 
    render() {
