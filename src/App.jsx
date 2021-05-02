@@ -8,17 +8,12 @@ import ReduxStore from './store/index';
 class App extends Component {
    render() {
       return (
-         <Provider store={ReduxStore}>
+         <Provider store={ReduxStore()}>
             <Router>
                <Switch>
                   <Route
-                     path={routes.register.path}
-                     component={routes.register.component}
-                     exact={true}
-                  />
-                  <Route
-                     path={routes.login.path}
-                     component={routes.login.component}
+                     path={routes.patientForm.path}
+                     component={routes.patientForm.component}
                      exact={true}
                   />
                   <Route
