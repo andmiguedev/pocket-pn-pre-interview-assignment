@@ -3,7 +3,7 @@ import 'firebase/firestore';
 import 'firebase/auth';
 
 const firebaseConfig = {
-   apiKey: "AIzaSyCmZAhFE1AOfEpivNicD2bSgsWRGn-GdtY",
+    apiKey: "AIzaSyCmZAhFE1AOfEpivNicD2bSgsWRGn-GdtY",
     authDomain: "pocket-pn-assignment-db.firebaseapp.com",
     projectId: "pocket-pn-assignment-db",
     storageBucket: "pocket-pn-assignment-db.appspot.com",
@@ -15,4 +15,5 @@ const firebaseApp = firebase.initializeApp(firebaseConfig);
 
 export const connectFirebase = firebaseApp.firestore();
 export const { Timestamp } = firebase.firestore;
-export const patientCollection = connectFirebase.collection('patients');
+
+export const patientsCollection = connectFirebase.collection('patients');

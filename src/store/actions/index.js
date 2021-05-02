@@ -1,4 +1,4 @@
-import { AUTH_PATIENT } from '../types/auth';
+import { AUTH_PATIENT } from '../types/index';
 import * as api from '../../api';
 
 export const registerPatient = (patientInfo) => ({

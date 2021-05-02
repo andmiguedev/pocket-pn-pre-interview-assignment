@@ -51,7 +51,7 @@ class PatientForm extends Component {
 
    render() {
       const { registerForm, patientForm, submitForm } = this.state;
-      const formTitle = registerForm ? 'Register Here' : ' Login to Your Account';
+      const formTitle = registerForm ? 'Register for a New Account' : ' Login to Your Account';
       
       return (
          <React.Fragment>
@@ -59,7 +59,7 @@ class PatientForm extends Component {
               <div className="form-container form-center">
                   <form
                      className="form-size"
-                     onSubmit={this.handleRegistration}
+                     onSubmit={this.handleSubmitForm}
                   >
                      <div className="company-logo">
                         <img src={demoLogo} alt="This is the logo for this assignment demo" />
